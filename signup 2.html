@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<head><style>
+/* styles.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* FAQ Page */
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+}
+
+.faq-answer.show {
+    display: block;
+}
+</style>
+
+</head><body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="home2.html">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Sign Up</h1>
+
+        <!-- Sign up form goes here -->
+        <form id="signup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required="">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required="">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required="">
+            <button type="submit">Sign Up</button>
+<div class="text-gray-700 w-full text-center font-light flex justify-center lg:text-base text-sm">Already have an account ? <a class="text-primary font-bold ml-1" href="/login">login to an existing account </a></div>
+        </form>
+    </main>
+    <footer>
+    <p class="text-gray-200 font-light lg:text-base text-xs">@Copyright 2025 OUYHIA AYOUB </p>
+        <!-- Footer content goes here -->
+    </footer>
+    <script src="script.js"></script>
+<script>
+// script.js
+
+// Function to validate the sign up form
+function validateSignUpForm() {
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    // Check if any field is empty
+    if (username === '' || email === '' || password === '') {
+        alert('Please fill in all fields');
+        return false;
+    }
+
+    // Check if email is valid
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address');
+        return false;
+    }
+
+    // Check if password is at least 6 characters long
+    if (password.length < 6) {
+        alert('Password must be at least 6 characters long');
+        return false;
+    }
+
+    // If all validations pass, return true
+    return true;
+}
+
+// Function to handle sign up form submission
+function signUp() {
+    if (validateSignUpForm()) {
+        // Form data is valid, you can submit the form to the server
+        alert('Sign up successful!');
+        // Here you can send the form data to the server using AJAX
+    }
+}
+
+// Function to validate the login form
+function validateLoginForm() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Check if any field is empty
+    if (username === '' || password === '') {
+        alert('Please fill in all fields');
+        return false;
+    }
+
+    // If all validations pass, return true
+    return true;
+}
+
+// Function to handle login form submission
+function login() {
+    if (validateLoginForm()) {
+        // Form data is valid, you can submit the form to the server
+        alert('Login successful!');
+        // Here you can send the form data to the server for authentication using AJAX
+    }
+}
+</script>
+
+
+</body></html>
