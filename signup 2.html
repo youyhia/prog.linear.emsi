@@ -1,138 +1,149 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<head><style>
-/* styles.css */
+    <style>
+        
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        .login-section,
+        .signup-section,
+        .faq-section {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #0e0b16;
+            color: #fff;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0e0b16;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
+        header {
+            background-color: #232946;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
 
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        nav ul li a {
+            color: #b8c1ec;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            font-weight: bold;
+        }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #eebbc3;
+            color: #232946;
+            transform: scale(1.1);
+        }
 
-nav ul li a:hover {
-    background-color: #555;
-}
+        
 
-main {
-    padding: 20px;
-}
+        
+        main {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #0e0b16; 
+            color: #fff; 
+        }
 
+        h1 {
+            font-size: 3rem; 
+            margin-bottom: 30px;
+            color: #eebbc3; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #b8c1ec; 
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #232946; 
+            border: none;
+            border-radius: 5px;
+            color: #fff; 
+        }
+
+        button[type="submit"] {
+            background-color: #eebbc3; 
+            color: #232946; 
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #232946; 
+            color: #eebbc3; 
+            transform: scale(1.1);
+        }
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* FAQ Page */
-.faq-item {
-    margin-bottom: 20px;
-}
-
-.faq-question {
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.faq-answer {
-    display: none;
-    margin-top: 10px;
-}
-
-.faq-answer.show {
-    display: block;
-}
-</style>
-
-</head><body>
+            background-color: #141414;
+            color: #eebbc3;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+            font-size: 0.9rem;
+        }
+    
+    </style>
+</head>
+<body>
     <header>
         <nav>
             <ul>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="home2.html">Home</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="signup 2.html">Sign Up</a></li>
+                <li><a href="login 2.html">Log In</a></li>
+                <li><a href="home3.html">Home</a></li>
+                <li><a href="faq 2.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Sign Up</h1>
-
-        <!-- Sign up form goes here -->
         <form id="signup-form">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required="">
@@ -141,79 +152,71 @@ button:hover {
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required="">
             <button type="submit">Sign Up</button>
-<div class="text-gray-700 w-full text-center font-light flex justify-center lg:text-base text-sm">Already have an account ? <a class="text-primary font-bold ml-1" href="/login">login to an existing account </a></div>
         </form>
     </main>
+    <div class="text-gray-700 w-full text-center font-light flex justify-center lg:text-base text-sm" style="color: #b8c1ec; width: 100%; text-align: center; font-weight: 300; display: flex; justify-content: center; font-size: 1.25rem; font-size: 0.875rem;">
+    Already have an account? <a class="text-primary font-bold ml-1" href="login 2.html" style="color: #eebbc3; font-weight: bold; margin-left: 0.25rem;">Login to an existing account</a>
+</div>
     <footer>
-    <p class="text-gray-200 font-light lg:text-base text-xs">@Copyright 2025 OUYHIA AYOUB </p>
-        <!-- Footer content goes here -->
+        <p class="text-gray-200 font-light lg:text-base text-xs">@Copyright 2025 OUYHIA AYOUB </p>
     </footer>
-    <script src="script.js"></script>
 <script>
-// script.js
 
-// Function to validate the sign up form
-function validateSignUpForm() {
-    var username = document.getElementById('username').value;
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+let users = [
+    { username: 'ayoub', email: 'youyhia248@gmail.com', password: 'bobo' },
+    { username: 'hicham', email: 'hicham@gmail.com', password: 'rita' }
+];
 
-    // Check if any field is empty
-    if (username === '' || email === '' || password === '') {
-        alert('Please fill in all fields');
-        return false;
+
+function signUp(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+   
+    if (users.some(user => user.username === username)) {
+        alert('Username already exists. Please choose a different one.');
+        return;
     }
 
-    // Check if email is valid
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return false;
+    if (users.some(user => user.email === email)) {
+        alert('Email already exists. Please use a different one.');
+        return;
     }
 
-    // Check if password is at least 6 characters long
-    if (password.length < 6) {
-        alert('Password must be at least 6 characters long');
-        return false;
-    }
-
-    // If all validations pass, return true
-    return true;
+    
+    users.push({ username, email, password });
+    alert('Sign up successful! You can now log in.');
+    
+    window.location.href = 'login 2.html';
 }
 
-// Function to handle sign up form submission
-function signUp() {
-    if (validateSignUpForm()) {
-        // Form data is valid, you can submit the form to the server
-        alert('Sign up successful!');
-        // Here you can send the form data to the server using AJAX
-    }
-}
 
-// Function to validate the login form
-function validateLoginForm() {
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+function login(event) {
+    event.preventDefault();
 
-    // Check if any field is empty
-    if (username === '' || password === '') {
-        alert('Please fill in all fields');
-        return false;
-    }
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
 
-    // If all validations pass, return true
-    return true;
-}
+    
+    const user = users.find(user => user.username === username && user.password === password);
 
-// Function to handle login form submission
-function login() {
-    if (validateLoginForm()) {
-        // Form data is valid, you can submit the form to the server
+    if (user) {
         alert('Login successful!');
-        // Here you can send the form data to the server for authentication using AJAX
+       
+        window.location.href = 'home3.html';
+    } else {
+        alert('Invalid username or password. Please try again.');
     }
 }
+
+
+document.getElementById('signup-form').addEventListener('submit', signUp);
+document.getElementById('login-form').addEventListener('submit', login);
+
 </script>
+</body>
 
-
-</body></html>
+</html>
