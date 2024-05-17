@@ -4,7 +4,7 @@
     <title>Log In</title>
     <link rel="stylesheet" href="styles.css">
 <style>
-        /* Reset CSS */
+        
         * {
             margin: 0;
             padding: 0;
@@ -67,20 +67,20 @@
 main {
             text-align: center;
             padding: 100px 20px;
-            background-color: #0e0b16; /* Dark background color */
-            color: #fff; /* Text color */
+            background-color: #0e0b16; 
+            color: #fff; 
         }
 
         h1 {
-            font-size: 3rem; /* Larger font size */
+            font-size: 3rem; 
             margin-bottom: 30px;
-            color: #eebbc3; /* Pinkish color */
+            color: #eebbc3; 
         }
 
         label {
             display: block;
             margin-bottom: 10px;
-            color: #b8c1ec; /* Lighter text color */
+            color: #b8c1ec; 
         }
 
         input[type="text"],
@@ -88,15 +88,15 @@ main {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            background-color: #232946; /* Darker input background */
+            background-color: #232946; 
             border: none;
             border-radius: 5px;
-            color: #fff; /* Text color */
+            color: #fff; 
         }
 
         button[type="submit"] {
-            background-color: #eebbc3; /* Pinkish button color */
-            color: #232946; /* Button text color */
+            background-color: #eebbc3; 
+            color: #232946; 
             padding: 15px 40px;
             border: none;
             border-radius: 25px;
@@ -106,8 +106,8 @@ main {
         }
 
         button[type="submit"]:hover {
-            background-color: #232946; /* Darker button color on hover */
-            color: #eebbc3; /* Text color on hover */
+            background-color: #232946; 
+            color: #eebbc3; 
             transform: scale(1.1);
         }
 
@@ -265,95 +265,59 @@ main {
     <header>
         <nav>
             <ul>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="home2.html">Home</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="signup 2.html">Sign Up</a></li>
+                <li><a href="login 2.html">Log In</a></li>
+                <li><a href="home3.html">Home</a></li>
+                <li><a href="faq 2.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Log In</h1>
-        <!-- Log in form goes here -->
+        
         <form id="login-form">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required="">
+            <input type="text" id="login-username" name="username" required="">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required="">
+            <input type="password" id="login-password" name="password" required="">
             <button type="submit">Log In</button>
         </form>
     </main>
     <footer>
     <p class="text-gray-200 font-light lg:text-base text-xs">@Copyright 2025 OUYHIA AYOUB </p>
-        <!-- Footer content goes here -->
+        
     </footer>
-    <script src="script.js"></script>
+   
 
 
 
 <script>
-// script.js
+        
+        let users = [
+            { username: 'ayoub', password: 'bobo' },
+            { username: 'hicham', password: 'rita' }
+        ];
 
-// Function to validate the sign up form
-function validateSignUpForm() {
-    var username = document.getElementById('username').value;
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+        
+        function login(event) {
+            event.preventDefault();
 
-    // Check if any field is empty
-    if (username === '' || email === '' || password === '') {
-        alert('Please fill in all fields');
-        return false;
-    }
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
 
-    // Check if email is valid
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return false;
-    }
+            
+            const user = users.find(user => user.username === username && user.password === password);
 
-    // Check if password is at least 6 characters long
-    if (password.length < 6) {
-        alert('Password must be at least 6 characters long');
-        return false;
-    }
+            if (user) {
+                alert('Login successful!');
+                
+                window.location.href = 'home3.html';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        }
 
-    // If all validations pass, return true
-    return true;
-}
-
-// Function to handle sign up form submission
-function signUp() {
-    if (validateSignUpForm()) {
-        // Form data is valid, you can submit the form to the server
-        alert('Sign up successful!');
-        // Here you can send the form data to the server using AJAX
-    }
-}
-
-// Function to validate the login form
-function validateLoginForm() {
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-
-    // Check if any field is empty
-    if (username === '' || password === '') {
-        alert('Please fill in all fields');
-        return false;
-    }
-
-    // If all validations pass, return true
-    return true;
-}
-
-// Function to handle login form submission
-function login() {
-    if (validateLoginForm()) {
-        // Form data is valid, you can submit the form to the server
-        alert('Login successful!');
-        // Here you can send the form data to the server for authentication using AJAX
-    }
-}
+        
+        document.getElementById('login-form').addEventListener('submit', login);
     </script>
 </body></html>
